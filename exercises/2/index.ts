@@ -7,15 +7,31 @@ interface Contact {
 const addressBook: Contact[] = [];
 
 const addContact = (addressBook: Contact[], contact: Contact): void => {
-    addressBook.push(contact)
-}
+    if ([contact.name, contact.email, contact.number].some(field => field.trim() === '')) {
+        console.log('Proszę wypełnić wszystkie dane.');
+    } else {
+        addressBook.push(contact);
+        console.log('Kontakt dodany pomyślnie.');
+    }
+};
 
 const getContacts = (addressBook: Contact[]): void => {
-    addressBook.forEach((contact, index) => {
-        console.log(`${index}: ${contact.name}, ${contact.email}, ${contact.number}`)
-    })
-}
+    if (addressBook.length === 0) {
+        console.log('Książka adresowa jest pusta.');
+    } else {
+        addressBook.forEach((contact, index) => {
+            console.log(`${index}: ${contact.name}, ${contact.email}, ${contact.number}`);
+        });
+    }
+};
 
-addContact(addressBook, { name: 'John Doe', email: 'john.doe@example.com', number: '123-456-790' });
-
-getContacts(addressBook)
+const getByName = (addressBook: Contact[], name: string): void => {
+    const foundContacts = addressBook.filter(contact => contact.name.toLowerCase() === name.toLowerCase());
+    if (foundContacts.length > 0) {
+        foundContacts.forEach((contact, index) => {
+            console.log(`Znaleziono kontakt: ${index}: ${contact.name}, ${contact.email}, ${contact.number}`);
+        });
+    } else {
+        console.log(`Nie znaleziono kontaktu o imieniu: ${name}`);
+    }
+};
