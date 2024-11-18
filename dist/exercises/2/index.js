@@ -30,4 +30,16 @@ var getByName = function (addressBook, name) {
         console.log("Nie znaleziono kontaktu o imieniu: ".concat(name));
     }
 };
+var deleteContact = function (addressBook, name) {
+    var initialLength = addressBook.length;
+    var updatedAddressBook = addressBook.filter(function (contact) { return contact.name.toLowerCase() !== name.toLowerCase(); });
+    if (updatedAddressBook.length < initialLength) {
+        console.log('Kontakt został usunięty');
+        addressBook.length = 0;
+        addressBook.push.apply(addressBook, updatedAddressBook);
+    }
+    else {
+        console.log('Nie znaleziono kontaktu.');
+    }
+};
 //# sourceMappingURL=index.js.map

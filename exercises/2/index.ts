@@ -35,3 +35,15 @@ const getByName = (addressBook: Contact[], name: string): void => {
         console.log(`Nie znaleziono kontaktu o imieniu: ${name}`);
     }
 };
+
+const deleteContact = (addressBook: Contact[], name: string): void => {
+    const initialLength = addressBook.length;
+    const updatedAddressBook = addressBook.filter(contact => contact.name.toLowerCase() !== name.toLowerCase())
+    if (updatedAddressBook.length < initialLength) {
+        console.log('Kontakt został usunięty')
+        addressBook.length = 0;
+        addressBook.push(...updatedAddressBook)
+    } else {
+        console.log('Nie znaleziono kontaktu.')
+    }
+}
