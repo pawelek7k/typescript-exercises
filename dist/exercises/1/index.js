@@ -1,20 +1,26 @@
 "use strict";
-var Genre;
-(function (Genre) {
-    Genre["Fiction"] = "Fiction";
-    Genre["NonFiction"] = "NonFiction";
-    Genre["Fantasy"] = "Fantasy";
-    Genre["Biography"] = "Biography";
-    Genre["ScienceFiction"] = "ScienceFiction";
-})(Genre || (Genre = {}));
-var library = [
-    {
-        title: 'ok',
-        author: 'okok',
-        yearPublished: 2,
-        genre: Genre.Fiction,
-        isAvailable: false,
-    }
-];
-console.log(library);
+// type Book = {
+//     title: string;
+//     author: string;
+//     yearPublished: number;
+//     genre: Genre;
+//     isAvailable: boolean;
+// };
+// enum Genre {
+//     Fiction = 'Fiction',
+//     NonFiction = 'NonFiction',
+//     Fantasy = 'Fantasy',
+//     Biography = 'Biography',
+//     ScienceFiction = 'ScienceFiction'
+// }
+// const library: Book[] = [
+//     {
+//         title: 'ok',
+//         author: 'okok',
+//         yearPublished: 2,
+//         genre: Genre.Fiction,
+//         isAvailable: false,
+//     }
+// ]
+// console.log(library)
 //# sourceMappingURL=index.js.map
