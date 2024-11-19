@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../exercises/4/index.ts"],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../exercises/4/index.ts"],"names":[],"mappings":";AAAA;IAKI,qBAAY,KAAa,EAAE,MAAc,EAAE,IAAY;QACnD,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;QACnB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,IAAI,GAAG,IAAI,CAAA;IACpB,CAAC;IAED,iCAAW,GAAX;QACI,OAAO,CAAC,GAAG,CAAC,kBAAW,IAAI,CAAC,KAAK,yBAAe,IAAI,CAAC,MAAM,uBAAa,IAAI,CAAC,IAAI,MAAG,CAAC,CAAA;IACzF,CAAC;IACL,kBAAC;AAAD,CAAC,AAdD,IAcC"}
